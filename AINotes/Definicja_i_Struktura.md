@@ -45,3 +45,10 @@
 **Zasada Hierarchii:** Zachowujemy ścisłą hierarchię Atomic Design, gdzie tylko elementy niższego rzędu mogą wchodzić w skład elementów wyższego rzędu. "Heart" na poziomie "Country" zarządza jedynie listami i powiązaniami elementów z niższych poziomów (głównie Organisms), ale sam nie jest częścią żadnego z nich, ani nie zawiera bezpośrednio ich szczegółowych definicji (przechowuje jedynie do nich odniesienia).
 
 Ta notatka definiuje początkową strukturę danych, którą "heart" będzie musiał przechowywać i przetwarzać. Daje nam to solidną podstawę do dalszego planowania implementacji.
+
+## Terminale w architekturze
+
+- Terminal to specjalny punkt wejścia (interfejs) do wybranego organizmu (Organism) lub wyższego poziomu (np. World).
+- Terminal może być przypisany do konkretnego organizmu (np. edytor sekcji, panel zarządzania stroną) lub mieć charakter globalny (terminal world).
+- Przykład: terminal world o nazwie "front end canvas" będzie globalnym punktem wejścia do tworzenia stron internetowych front end.
+- Terminale są rozszerzalne – można dodawać kolejne typy terminali dla różnych warstw i zastosowań.
