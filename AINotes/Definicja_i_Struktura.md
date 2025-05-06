@@ -52,3 +52,21 @@ Ta notatka definiuje początkową strukturę danych, którą "heart" będzie mus
 - Terminal może być przypisany do konkretnego organizmu (np. edytor sekcji, panel zarządzania stroną) lub mieć charakter globalny (terminal world).
 - Przykład: terminal world o nazwie "front end canvas" będzie globalnym punktem wejścia do tworzenia stron internetowych front end.
 - Terminale są rozszerzalne – można dodawać kolejne typy terminali dla różnych warstw i zastosowań.
+
+## Struktura plików terminali/projektów
+
+- Każdy terminal/projekt w monorepo (każdy folder w packages) powinien mieć własne pliki:
+  - `main.js` – główny plik logiki/aplikacji
+  - `index.html` – plik startowy HTML
+  - `style.css` – style dla danego terminala/projektu
+- Pozwala to na niezależny rozwój, testowanie i uruchamianie każdego terminala.
+- Ułatwia modularność, przejrzystość i rozbudowę narzędzia.
+
+# Minimalny subset tagów i funkcji (Kompiler 0.1, WebGL2-centric)
+
+- HTML: tylko <canvas> (opcjonalnie: div, button, input do prostych UI)
+- CSS: tylko style dla canvas i prostych UI (width, height, background, position, color, font-family)
+- JS: tylko logika do obsługi WebGL2, eventy, proste UI, integracja z AI
+
+Każdy terminal/projekt może mieć swój własny kompilator.
+My piszemy własny, minimalistyczny, pod WebGL2.
